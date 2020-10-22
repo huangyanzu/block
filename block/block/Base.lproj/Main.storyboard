@@ -141,8 +141,17 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Detail" id="BOp-LR-Efj">
-                        <barButtonItem key="rightBarButtonItem" title="save" id="yW2-zJ-ROF"/>
+                        <barButtonItem key="rightBarButtonItem" title="save" id="yW2-zJ-ROF">
+                            <connections>
+                                <action selector="saveAction:" destination="okM-sY-fXN" id="Onp-9F-uKZ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="jobText" destination="YFZ-2o-Xh2" id="6na-mN-qwV"/>
+                        <outlet property="nameText" destination="VDY-xX-f1Z" id="hZR-U8-V4r"/>
+                        <outlet property="phoneText" destination="LkN-jM-NFL" id="BzB-sK-cVu"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Fr-me-iBf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
