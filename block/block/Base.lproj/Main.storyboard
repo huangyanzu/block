@@ -10,7 +10,7 @@
         <!--List-->
         <scene sceneID="ZTQ-c4-7Mq">
             <objects>
-                <tableViewController id="NgA-53-GXG" sceneMemberID="viewController">
+                <tableViewController id="NgA-53-GXG" customClass="ListViewController" customModule="block" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="W06-FB-hna">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,7 +45,7 @@
         <!--Detail-->
         <scene sceneID="5Lt-B9-TCo">
             <objects>
-                <tableViewController id="okM-sY-fXN" sceneMemberID="viewController">
+                <tableViewController id="okM-sY-fXN" customClass="DetailViewController" customModule="block" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IVH-bw-5Lo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
