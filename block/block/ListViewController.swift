@@ -89,9 +89,11 @@ class ListViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       
         let vc = segue.destination as! DetailViewController
         
         if let indexPath = sender as? IndexPath{
+            
             vc.person = personList[indexPath.row]
         }
         

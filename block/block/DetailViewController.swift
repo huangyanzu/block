@@ -22,10 +22,10 @@ class DetailViewController: UITableViewController {
    
         super.viewDidLoad()
    
-        if person != nil{
-            nameText.text = person?.name
-            phoneText.text = person?.phone
-            jobText.text = person?.job
+        if person != nil {
+            //nameText.text = person?.name
+           // phoneText.text = person?.phone
+           // jobText.text = person?.job
         }
       
         
