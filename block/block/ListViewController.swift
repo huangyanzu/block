@@ -81,6 +81,23 @@ class ListViewController: UITableViewController {
         
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        performSegue(withIdentifier: "listToDetail", sender: indexPath)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! DetailViewController
+        
+        if let indexPath = sender as? IndexPath{
+            vc.person = personList[indexPath.row]
+        }
+        
+        
+    }
+    
     
 
 }
