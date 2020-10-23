@@ -23,7 +23,17 @@ class ListViewController: UITableViewController {
             
         }
     }
-
+    @IBAction func addPerson(_ sender: Any) {
+        
+        print("aaaaa")
+        
+        performSegue(withIdentifier: "listToDetail", sender: nil)
+        
+      
+        
+        
+    }
+    
     // MARK: - Table view data source
 
     private func loadData(completion:@escaping(_ list:[Person])->())->(){
@@ -66,6 +76,8 @@ class ListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+       
         return personList.count
     }
     
@@ -75,6 +87,8 @@ class ListViewController: UITableViewController {
         
         cell.textLabel?.text = personList[indexPath.row].name
         cell.detailTextLabel?.text = personList[indexPath.row].phone
+        
+     
         
         return cell 
         
@@ -95,6 +109,22 @@ class ListViewController: UITableViewController {
         if let indexPath = sender as? IndexPath{
             
             vc.person = personList[indexPath.row]
+            vc.completionCallBack = {
+            self.tableView.reloadRows(at: [indexPath], with: .automatic)
+            }
+        }else{
+            vc.completionCallBack = {
+                
+                guard let p = vc.person else{
+                    return
+                }
+                
+                self.personList.insert(p, at: 0)
+                
+                self.tableView.reloadData()
+                
+                
+            }
         }
         
         

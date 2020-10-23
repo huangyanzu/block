@@ -49,6 +49,7 @@
                     <navigationItem key="navigationItem" title="List" id="gvN-xP-Cjz">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="aCz-wa-LgM">
                             <connections>
+                                <action selector="addPerson:" destination="NgA-53-GXG" id="WfS-2r-Y7x"/>
                                 <segue destination="okM-sY-fXN" kind="show" identifier="listToDetail" id="Dq3-4Q-mVa"/>
                             </connections>
                         </barButtonItem>

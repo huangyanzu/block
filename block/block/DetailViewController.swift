@@ -12,6 +12,8 @@ class DetailViewController: UITableViewController {
     
     var person : Person?
     
+    var completionCallBack:(()->())?
+    
     @IBOutlet weak var nameText: UITextField!
     
     @IBOutlet weak var phoneText: UITextField!
@@ -23,9 +25,9 @@ class DetailViewController: UITableViewController {
         super.viewDidLoad()
    
         if person != nil {
-            //nameText.text = person?.name
-           // phoneText.text = person?.phone
-           // jobText.text = person?.job
+           nameText.text = person?.name
+           phoneText.text = person?.phone
+           jobText.text = person?.job
         }
       
         
@@ -35,7 +37,17 @@ class DetailViewController: UITableViewController {
 
     @IBAction func saveAction(_ sender: Any) {
         
+        if person == nil {
+            person = Person()
+        }
         
+        person?.name = nameText.text
+        person?.phone = phoneText.text
+        person?.job = jobText.text
+        
+        completionCallBack?()
+        
+        navigationController?.popViewController(animated: true)
         
     }
     
