@@ -113,9 +113,9 @@ class ListViewController: UITableViewController {
             self.tableView.reloadRows(at: [indexPath], with: .automatic)
             }
         }else{
-            vc.completionCallBack = {
+            vc.completionCallBack = { [weak vc] in
                 
-                guard let p = vc.person else{
+                guard let p = vc?.person else{
                     return
                 }
                 

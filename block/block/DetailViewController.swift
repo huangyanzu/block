@@ -38,6 +38,7 @@ class DetailViewController: UITableViewController {
     @IBAction func saveAction(_ sender: Any) {
         
         if person == nil {
+            
             person = Person()
         }
         
